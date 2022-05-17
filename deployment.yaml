@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: order_server
+    spec:
+      containers:
+      - name: elated_vaughan
+        image: pamal97/order_server
+        ports:
+        - containerPort: 3000
